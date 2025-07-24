@@ -22,3 +22,12 @@ main{
 .item:hover{
     background-color: lightskyblue;
 }
+
+.parrafoAmplio{
+    transition: font-size 300ms ease-out;
+}
+
+.parrafoAmplio:hover{
+    font-size: larger;
+    cursor: pointer;
+}
