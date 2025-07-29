@@ -127,39 +127,49 @@ main {
 
 /* animacion y transicion */
 
-.contenedorPrincipal{
-    width: 250px;
-    height: 250px;
+.contenedorPrincipal {
+  width: 250px;
+  height: 250px;
 }
 
-.circulo{
-    width: 30px;
-    height: 30px;
-    background-color: #1444e3;
-    border-radius: 50%;
-    position: relative;
-    animation: animacionCompleja 4s ease 5; 
+.circulo {
+  width: 30px;
+  height: 30px;
+  background-color: #1444e3;
+  border-radius: 50%;
+  position: relative;
+  animation: animacionCompleja 5s ease infinite;
+  transition: border-radius 200ms linear;
+}
+
+.circulo:hover {
+  border-radius: 0%;
 }
 
 @keyframes animacionCompleja {
-    0%{
-        top: 0px;
-        left: 0px;
-    }
-    25%{
-        top: 0px;
-        left: 100px;
-    }
-    50%{
-        top: 100px;
-        left: 100px;
-    }
-    75%{
-        top: 100px;
-        left: 0px;
-    }
-    100%{
-        top: 0px;
-        left: 0px;
-    }
+  0% {
+    top: 0px;
+    left: 0px;
+    background-color: #1444e3;
+  }
+  25% {
+    top: 0px;
+    left: 100px;
+    background-color: #6a14e3;
+  }
+  50% {
+    top: 100px;
+    left: 100px;
+    background-color: #14e371;
+  }
+  75% {
+    top: 100px;
+    left: 0px;
+    background-color: #14cee3;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    background-color: #1444e3;
+  }
 }
