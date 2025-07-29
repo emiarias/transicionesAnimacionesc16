@@ -1,78 +1,92 @@
-body{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-main{
-    flex-grow: 1;
+main {
+  flex-grow: 1;
 }
 
 /* transicion de color */
-.item{
-    background-color: tomato;
-    width: 200px;
-    height: 200px;
-    transition-property: background-color;
-    transition-duration: 800ms;
-    transition-timing-function: cubic-bezier(0.97,-0.18, 0.28, 1.13);
-    /* transition-delay: 300ms; */
+.item {
+  background-color: tomato;
+  width: 200px;
+  height: 200px;
+  transition-property: background-color;
+  transition-duration: 800ms;
+  transition-timing-function: cubic-bezier(0.97, -0.18, 0.28, 1.13);
+  /* transition-delay: 300ms; */
 }
 
-.item:hover{
-    background-color: lightskyblue;
+.item:hover {
+  background-color: lightskyblue;
 }
 
-.parrafoAmplio{
-    transition: font-size 300ms ease-out;
+.parrafoAmplio {
+  transition: font-size 300ms ease-out;
 }
 
-.parrafoAmplio:hover{
-    font-size: larger;
-    cursor: pointer;
+.parrafoAmplio:hover {
+  font-size: larger;
+  cursor: pointer;
 }
 
-.itemOpacidad{
-    width: 200px;
-    height: 100px;
-    background-color: lightcoral;
-    opacity: 0.5;
-    transition: opacity 200ms ease-in-out;
+.itemOpacidad {
+  width: 200px;
+  height: 100px;
+  background-color: lightcoral;
+  opacity: 0.5;
+  transition: opacity 200ms ease-in-out;
 }
 
-.itemOpacidad:hover{
-     opacity: 1;
+.itemOpacidad:hover {
+  opacity: 1;
 }
 
-.subrayado{
-    position: relative;
-    display: inline-block;
+.subrayado {
+  position: relative;
+  display: inline-block;
 }
 
-.subrayado:hover{
-    cursor: pointer;
+.subrayado:hover {
+  cursor: pointer;
 }
 
-.subrayado::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0%;
-    background-color: chartreuse;
-    height: 2px;
-    transition: width 250ms ease-in;
+.subrayado::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  background-color: chartreuse;
+  height: 2px;
+  transition: width 250ms ease-in;
 }
 
-.subrayado:hover::after{
-    width: 100%;
+.subrayado:hover::after {
+  width: 100%;
 }
 
 /* animacion de movimiento */
-.contenedorAnimado{
-    width: 150px;
-    height: 50px;
-    background-color: lightgrey;
-    color: black;
-    
+.contenedorAnimado {
+  width: 150px;
+  height: 50px;
+  background-color: lightgrey;
+  color: black;
+  animation-name: movimiento;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;  
+}
+
+@keyframes movimiento {
+  from {
+    /* aqui nombro los valores de css que quiero que tenga la animacion en el inicio */
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(200px);
+  }
 }
