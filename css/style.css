@@ -67,3 +67,12 @@ main{
 .subrayado:hover::after{
     width: 100%;
 }
+
+/* animacion de movimiento */
+.contenedorAnimado{
+    width: 150px;
+    height: 50px;
+    background-color: lightgrey;
+    color: black;
+    
+}
